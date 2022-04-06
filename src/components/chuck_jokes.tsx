@@ -1,12 +1,9 @@
-// An alternative way of declaring a component is to write it as a function which
-// returns a JSX.Element 
-function ChuckJokes() : JSX.Element {
+import Joke from "../joke";
 
-    return (
-        <>
-            <p></p>
-        </>
-    )
-}
+const ChuckJokes: React.FC<Joke> = ({id,joke}) => (
+    <div>
+        <p>{id} : {joke}</p>
+    </div>
+);
 
 export default ChuckJokes;
